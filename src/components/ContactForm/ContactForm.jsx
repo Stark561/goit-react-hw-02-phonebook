@@ -15,7 +15,7 @@ export class ContactForm extends React.Component {
 
   checkContactName = () => {
     const { contacts } = this.props;
-    return contacts.some(el => el.name === this.state.name);
+    return contacts.some(el => el.name.toLowerCase() === this.state.name.toLowerCase());
   };
 
   onChange = e => {
